@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #ffffff;
+    color: #1e2a23;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: 0.3s ease;
+    background: #1f5f3a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-nav.sticky {
+    padding: 14px 0;
+    background: #1f5f3a;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-size: 34px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #b7f0c6;
+}
+
+
+.main-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 2rem;
+}
+
+
+.categories-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background: #fbfdfb;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid #eef2ee;
+    align-self: start;
+    position: sticky;
+    top: 100px;
+}
+
+.categories-sidebar h2 {
+    font-size: 1.5rem;
+    color: #1f5f3a;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e0e8e0;
+    padding-bottom: 0.5rem;
+}
+
+.category-list {
+    list-style: none;
+}
+
+.category-list li {
+    margin-bottom: 0.8rem;
+}
+
+.category-list a {
+    text-decoration: none;
+    color: #2c3e2f;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.2s;
+}
+
+.category-list a:hover {
+    color: #1f5f3a;
+    transform: translateX(4px);
+}
+
+.category-count {
+    color: #8faa95;
+    font-size: 0.85rem;
+}
+
+
+.products-area {
+    flex: 1;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2rem;
+}
+
+.products-header h1 {
+    font-size: 1.6rem;
+    color: #1f5f3a;
+}
+
+.result-count {
+    color: #5a6e62;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #eef2ee;
+    overflow: hidden;
+    transition: 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
+}
+
+.img-wrapper {
+    position: relative;
+    height: 180px;
+    background: #f5f7f5;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    background: #e05a2a;
+    color: white;
+}
+
+.badge.popular {
+    background: #2c6e9e;
+}
+
+.badge.most-popular {
+    background: #1f5f3a;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1f5f3a;
+    margin-bottom: 0.3rem;
+}
+
+.product-desc {
+    font-size: 0.8rem;
+    color: #6b7c6f;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    margin: 0.4rem 0;
+}
+
+.rating-row i {
+    color: #f5b342;
+}
+
+.rating-num {
+    font-weight: 600;
+}
+
+.reviews {
+    color: #9aa89f;
+}
+
+.price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 0.7rem 0;
+}
+
+.new-price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #2f8f4e;
+}
+
+.old-price {
+    font-size: 0.85rem;
+    color: #9aa89f;
+    text-decoration: line-through;
+}
+
+.cart-btn {
+    background: #2f8f4e;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 0.5rem;
+}
+
+.cart-btn:hover {
+    background: #1f5f3a;
+    transform: scale(1.02);
+}
+
+
+.footer {
+    background: #163620;
+    color: #fff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.box {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer h2 {
+    color: #b7f0c6;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.links {
+    list-style: none;
+    text-align: center;
+}
+
+.links li {
+    margin-bottom: 10px;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #b7f0c6;
+}
+
+.address {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.social i {
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.social i:hover {
+    color: #b7f0c6;
+}
+
+
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .categories-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

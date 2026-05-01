@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #ffffff;
+    color: #1e2a23;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: 0.3s ease;
+    background: #1f5f3a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-nav.sticky {
+    padding: 14px 0;
+    background: #1f5f3a;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-size: 34px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #b7f0c6;
+}
+
+.login-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+}
+
+.login-card {
+    max-width: 500px;
+    width: 100%;
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid #eef2ee;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.login-card h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1f5f3a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1f5f3a;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 2px solid #dce5dc;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #2f8f4e;
+    box-shadow: 0 0 0 3px rgba(47, 143, 78, 0.1);
+}
+
+.forgot-link {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-link a {
+    color: #2f8f4e;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-link a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    background: #2f8f4e;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 1rem;
+}
+
+.login-btn:hover {
+    background: #1f5f3a;
+    transform: translateY(-2px);
+}
+
+.signup-link {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #4a5b52;
+}
+
+.signup-link a {
+    color: #2f8f4e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.feedback-message {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    background: #fee2e2;
+    color: #b91c1c;
+    display: none;
+}
+
+.footer {
+    background: #163620;
+    color: #fff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.box {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer h2 {
+    color: #b7f0c6;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.links {
+    list-style: none;
+    text-align: center;
+}
+
+.links li {
+    margin-bottom: 10px;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #b7f0c6;
+}
+
+.address {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.social i {
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.social i:hover {
+    color: #b7f0c6;
+}
+
+@media (max-width: 650px) {
+    .login-card {
+        padding: 1.5rem;
+    }
+
+    .login-card h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
